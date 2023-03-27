@@ -1,5 +1,26 @@
 const User = require("../models/User");
 const asyncHandler = require("express-async-handler");
+const { generateToken } = require("../utils/generateToken");
+
+// @desc Auth user and get Token
+// @route POST api/users/login
+// @access Public
+const authUser = asyncHandler(async (req, res) => {
+  const { email, password } = req.body;
+  const user = await User.findOne({ email });
+  if (user && (await user.matchPassword(password))) {
+    res.json({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      isAdmin: user.isAdmin,
+      token: generateToken(user._id),
+    });
+  } else {
+    res.status(401);
+    throw new Error("Credentials not valid");
+  }
+});
 
 //@desc register new user
 //@route POST /register
@@ -80,7 +101,6 @@ const updateUserById = asyncHandler(async (req, res) => {
       .json({ message: "User email exists already, try with a new one" });
   }
 
-
   if (firstName) user.firstName = firstName;
   if (lastName) user.lastName = lastName;
   if (email) user.email = email;
@@ -119,4 +139,5 @@ module.exports = {
   getUserById,
   updateUserById,
   deleteUserById,
+  authUser,
 };
