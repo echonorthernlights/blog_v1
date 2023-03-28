@@ -1,13 +1,6 @@
-20230327	22:19:17	6ebdad60-99fc-4396-b34a-f47002a8fbb0	ObjectParameterError: Parameter "filter" to find() must be an object, got elhassanianas@gmail.com	POST	/users	undefined
-20230327	22:30:16	00c401ec-3da3-4cf6-a0ed-3ca24d2fdef9	ReferenceError: s is not defined	PUT	/users/6422177ac154593fb776a008	undefined
-20230327	22:31:55	5824dbfb-9779-48cf-8fa7-591b0372b7aa	ReferenceError: s is not defined	PUT	/users/6422177ac154593fb776a008	undefined
-20230327	23:28:10	debb9c71-020d-497e-b140-0e1a458e12bf	Error: No token	GET	/users/6422177ac154593fb776a008	undefined
-20230327	23:28:45	7fae928d-e18b-4043-9337-64670224fb40	Error: Not Authorized	GET	/users/6422177ac154593fb776a008?authri	undefined
-20230327	23:38:54	e34821aa-dd7c-46a8-8ad1-62094925da65	Error: Credentials not valid	POST	/users/login	undefined
-20230327	23:39:22	eeed291e-2483-47dd-8148-5b1dd628cfc8	Error: Credentials not valid	POST	/users/login	undefined
-20230327	23:40:03	f153435a-b199-4151-b19a-93834d7ae7c1	ReferenceError: generateToken is not defined	POST	/users/login	undefined
-20230327	23:41:51	ca2dac20-4ab1-4743-bcb5-ed526fc05c49	Error: Credentials not valid	POST	/users/login	undefined
-20230327	23:42:00	e36f2311-c975-4e6a-bbac-9ba1fe46654d	Error: Credentials not valid	POST	/users/login	undefined
-20230327	23:43:08	3cfefa5d-9f67-44d3-a4f7-1eb43b619644	Error: No token	GET	/users/6422177ac154593fb776a008	undefined
-20230327	23:43:11	5c392f0f-cbc8-4e6f-a47c-ad6887470374	Error: No token	GET	/users/6422177ac154593fb776a008	undefined
-20230327	23:43:17	bb966103-ccaa-4001-b8d8-8355eab09237	Error: No token	GET	/users/6422177ac154593fb776a008	undefined
+20230328	21:09:19	abb5ad34-00e5-439f-b894-e240d8e631c8	TypeError: Cannot destructure property '_id' of 'req.user' as it is undefined.	POST	/articles	undefined
+20230328	21:10:02	22d4b9ab-077e-4970-955b-ea277e1ebdfa	Error: No token	POST	/articles	undefined
+20230328	21:10:16	ea8c8162-a19d-4f6f-a99a-dc8618891c4c	Error: No token	POST	/articles	undefined
+20230328	21:11:38	0bc5f0e5-867f-4428-b4ac-70c45e0be24d	CastError: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "User"	GET	/users/login	undefined
+20230328	21:11:48	c6066a71-011e-45b3-ba1c-436afa57b394	Error: Credentials not valid	POST	/users/login	undefined
+20230328	21:15:25	1f9bc3d3-be79-4c17-9fe3-31cf240acb04	ReferenceError: article is not defined	PUT	/articles/6423589e3a86fc200e7841a8	undefined

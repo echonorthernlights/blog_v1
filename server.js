@@ -4,7 +4,7 @@ const { connectDB } = require("./config/connectDB");
 const corsOptions = require("./config/corsOptions");
 
 const userRouter = require("./routes/userRoutes");
-
+const articleRouter = require("./routes/articleRoutes");
 const { logger, logEvents } = require("./middleware/logger");
 const errorHandler = require("./middleware/errorHandler");
 
@@ -21,6 +21,7 @@ app.use(express.json());
 
 //Routes
 app.use("/users", userRouter);
+app.use("/articles", articleRouter);
 
 const start = async () => {
   await connectDB(process.env.MONGO_URI);
