@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const asyncHandler = require("express-async-handler");
 const { generateToken } = require("../utils/generateToken");
+const { uploadImage } = require("../utils/uploadImage");
 
 // @desc Auth user and get Token
 // @route POST api/users/login
@@ -47,6 +48,7 @@ const registerUser = asyncHandler(async (req, res) => {
   }
   let newUser = { firstName, lastName, email, address, birthDate, password };
   newUser = await User.create(newUser);
+
   res.status(201).json({ message: "User created successfully", newUser });
 });
 
@@ -88,7 +90,8 @@ const updateUserById = asyncHandler(async (req, res) => {
     return res.status(400).json({ message: "No Id provided" });
   }
 
-  const { firstName, lastName, email, birthDate, address, password } = req.body;
+  const { firstName, lastName, email, birthDate, address, password, images } =
+    req.body;
 
   const user = await User.findById(id).select("-password").exec();
   if (!user) {
@@ -107,7 +110,8 @@ const updateUserById = asyncHandler(async (req, res) => {
   if (birthDate) user.birthDate = birthDate;
   if (address) user.address = address;
   if (password) user.password = password;
-
+  if (images) user.images = images;
+  uploadImage("profiles");
   const updatedUser = await user.save();
 
   return res

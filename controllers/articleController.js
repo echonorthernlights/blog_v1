@@ -1,5 +1,6 @@
 const Article = require("../models/Article");
 const asyncHandler = require("express-async-handler");
+var slugify = require("slugify");
 
 // @desc get all articles
 // @route GET /articles
@@ -36,12 +37,12 @@ const getArticleById = asyncHandler(async (req, res) => {
 // @access Public
 
 const createArticle = asyncHandler(async (req, res) => {
-  const { title, slug, text, images } = req.body;
+  const { title, text, images } = req.body;
   const { _id: userId } = req.user;
   const newArticle = {
     userId,
     title,
-    slug,
+    slug: slugify(title.toLowerCase()),
     text,
     images,
   };
@@ -57,7 +58,7 @@ const createArticle = asyncHandler(async (req, res) => {
 
 const updateArticle = asyncHandler(async (req, res) => {
   const { id } = req.params;
-  const { title, slug, text, images } = req.body;
+  const { title, text, images } = req.body;
   if (!id) {
     return res.status(404).json({ message: "No Id provided" });
   }
@@ -66,7 +67,7 @@ const updateArticle = asyncHandler(async (req, res) => {
     return res.status(404).json({ message: "Article not found" });
   }
   if (title) existingAticle.title = title;
-  if (slug) existingAticle.slug = slug;
+  if (slug) existingAticle.slug = slugify(title.toLowerCase());
   if (text) existingAticle.text = text;
   //if(images) existingAticle.images = images;
 
@@ -89,6 +90,7 @@ const deleteArticle = asyncHandler(async (req, res) => {
   if (!existingArticle) {
     return res.status(404).json({ message: "Article not found" });
   }
+  // test equality not working
   console.log(existingArticle.userId.toString(), "!!", req.user._id.toString());
   if (existingArticle._id.toString() !== req.user._id.toString()) {
     return res.status(401).json({ message: "Operations(s) not authorized!!" });

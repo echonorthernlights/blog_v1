@@ -4,3 +4,14 @@
 20230328	21:11:38	0bc5f0e5-867f-4428-b4ac-70c45e0be24d	CastError: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "User"	GET	/users/login	undefined
 20230328	21:11:48	c6066a71-011e-45b3-ba1c-436afa57b394	Error: Credentials not valid	POST	/users/login	undefined
 20230328	21:15:25	1f9bc3d3-be79-4c17-9fe3-31cf240acb04	ReferenceError: article is not defined	PUT	/articles/6423589e3a86fc200e7841a8	undefined
+20230328	21:38:03	eab3ad8b-f4b2-4232-ad9e-fb5228d16aba	Error: No token	POST	/articles/	undefined
+20230329	21:02:24	1f0d3f40-2905-4842-bf47-2ad9a87b71e4	Error: No token	POST	/articles/	undefined
+20230329	21:02:44	9deace9e-7630-46f1-875b-7e2ba10b7c37	Error: Credentials not valid	POST	/users/login	undefined
+20230329	21:02:56	ff703b91-abca-4231-a530-08926f369ac2	Error: Credentials not valid	POST	/users/login	undefined
+20230329	21:03:23	db6e8c32-0abe-49ec-87ab-92c3f465a49a	Error: Credentials not valid	POST	/users/login	undefined
+20230329	21:03:31	0e834474-a771-43ef-a645-3e5a73631a5a	Error: Credentials not valid	POST	/users/login	undefined
+20230329	21:09:56	6ab277b4-dcff-4782-8751-49d0332df05b	Error: No token	POST	/comments/6424a808fc28a293c573cdb8	undefined
+20230329	21:10:32	5a7fd4ab-2324-4f72-aa79-265d7c3a0cfc	Error: Credentials not valid	POST	/users/login	undefined
+20230329	21:14:11	a1ec2259-2229-4784-9ced-b3e18df10da8	Error: Credentials not valid	POST	/users/login	undefined
+20230329	21:14:44	83fbdb50-66d1-4266-b8d5-22c1c2174a15	Error: No token	DELETE	/comments/6424a9a8a62563fae2261370	undefined
+20230329	21:35:37	14dda728-ba71-4fb7-957f-99f5d251dbbb	Error: Not Authorized	PUT	/comments/6424adabd65a299b40ea8cf8	undefined
