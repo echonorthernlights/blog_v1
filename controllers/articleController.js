@@ -66,8 +66,10 @@ const updateArticle = asyncHandler(async (req, res) => {
   if (!existingAticle) {
     return res.status(404).json({ message: "Article not found" });
   }
-  if (title) existingAticle.title = title;
-  if (slug) existingAticle.slug = slugify(title.toLowerCase());
+  if (title) {
+    existingAticle.title = title;
+    existingAticle.slug = slugify(title.toLowerCase());
+  }
   if (text) existingAticle.text = text;
   //if(images) existingAticle.images = images;
 
@@ -90,9 +92,8 @@ const deleteArticle = asyncHandler(async (req, res) => {
   if (!existingArticle) {
     return res.status(404).json({ message: "Article not found" });
   }
-  // test equality not working
-  console.log(existingArticle.userId.toString(), "!!", req.user._id.toString());
-  if (existingArticle._id.toString() !== req.user._id.toString()) {
+
+  if (existingArticle.userId.toString() !== req.user._id.toString()) {
     return res.status(401).json({ message: "Operations(s) not authorized!!" });
   }
   const deletedArticle = await existingArticle.deleteOne();

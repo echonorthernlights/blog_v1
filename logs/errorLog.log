@@ -15,3 +15,5 @@
 20230329	21:14:11	a1ec2259-2229-4784-9ced-b3e18df10da8	Error: Credentials not valid	POST	/users/login	undefined
 20230329	21:14:44	83fbdb50-66d1-4266-b8d5-22c1c2174a15	Error: No token	DELETE	/comments/6424a9a8a62563fae2261370	undefined
 20230329	21:35:37	14dda728-ba71-4fb7-957f-99f5d251dbbb	Error: Not Authorized	PUT	/comments/6424adabd65a299b40ea8cf8	undefined
+20230329	21:48:41	6a0a1fed-34b5-4990-89b8-c92757758461	Error: No token	POST	/articles/	undefined
+20230329	21:50:11	eb2d12a0-d9da-46c6-bc8f-e692de2b5731	ReferenceError: slug is not defined	PUT	/articles/6424b2575846c8150f57a049	undefined

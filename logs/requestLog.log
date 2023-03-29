@@ -90,3 +90,9 @@
 20230329	21:43:10	1a3ea491-3579-428f-a2ba-1cc6aa66f444	DELETE	/comments/6424adabd65a299b40ea8cf8	undefined
 20230329	21:43:21	ffdca396-6da3-4661-a50f-1289872b50d5	POST	/users/login	undefined
 20230329	21:43:34	bcc3cdb6-1b01-4ec6-ba38-f78d01bef456	DELETE	/comments/6424adabd65a299b40ea8cf8	undefined
+20230329	21:48:07	670fc618-9f55-4a7a-bd80-f58046dd94b3	GET	/articles/	undefined
+20230329	21:48:41	84f6ec6c-07be-4f45-b861-61d5a16fc4f0	POST	/articles/	undefined
+20230329	21:48:59	e815e405-8c8a-4fef-be14-52264581f52b	POST	/users/login	undefined
+20230329	21:49:10	ac3082dc-e7fe-42c3-8e46-0822ca938008	POST	/articles/	undefined
+20230329	21:50:11	160adb11-7446-4ed0-b45e-81a9176a8876	PUT	/articles/6424b2575846c8150f57a049	undefined
+20230329	21:51:08	dd3e7e21-62e3-441a-ad4b-383451a6619b	PUT	/articles/6424b2575846c8150f57a049	undefined
