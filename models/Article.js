@@ -18,6 +18,11 @@ const articleSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    likes: {
+      type: Number,
+      integer: true,
+      default: 0,
+    },
     images: [
       {
         type: String,

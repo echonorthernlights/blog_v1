@@ -27,12 +27,13 @@ const protect = asyncHandler(async (req, res, next) => {
   }
 });
 
-const admin = asyncHandler(async (req, res, next) => {
-  if (req.user && req.user.isAdmin) {
+const author = asyncHandler(async (req, res, next) => {
+  if (req.user && req.user.isAuthor) {
     next();
   } else {
+    s;
     res.status(401);
-    throw new Error("Not authorized as Admin");
+    throw new Error("Not authorized as Author");
   }
 });
-module.exports = { protect, admin };
+module.exports = { protect, author };

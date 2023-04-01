@@ -17,3 +17,13 @@
 20230329	21:35:37	14dda728-ba71-4fb7-957f-99f5d251dbbb	Error: Not Authorized	PUT	/comments/6424adabd65a299b40ea8cf8	undefined
 20230329	21:48:41	6a0a1fed-34b5-4990-89b8-c92757758461	Error: No token	POST	/articles/	undefined
 20230329	21:50:11	eb2d12a0-d9da-46c6-bc8f-e692de2b5731	ReferenceError: slug is not defined	PUT	/articles/6424b2575846c8150f57a049	undefined
+20230329	23:19:32	771195dd-7f34-4d4d-bf28-b55d48fda0c2	TypeError: Assignment to constant variable.	POST	/users	undefined
+20230330	22:14:28	49cf33dd-6e7f-4b8a-a8bd-e22d167327d1	ReferenceError: upload is not defined	POST	/users	undefined
+20230330	22:23:36	7b07d268-95c4-442e-98a8-baafeeada88f	TypeError: Cannot destructure property 'files' of 'undefined' as it is undefined.	POST	/users	undefined
+20230330	22:27:31	670ddac0-97b6-4e45-89ff-7df42b675400	TypeError: Cannot destructure property 'files' of 'undefined' as it is undefined.	POST	/users	undefined
+20230330	22:57:55	96499621-2562-4f12-9e17-1e6e1218afd4	Error: Not allowed by CORS policy	POST	/upload	http://localhost:5001
+20230401	21:14:24	6a3a8bc4-474f-4d19-81ab-17a52974f6ff	Error: No token	POST	/like/6424a808fc28a293c573cdb8	undefined
+20230401	21:15:15	fd5119bc-b4c4-47a3-90e7-5320957ce0a0	Error: Not Authorized	POST	/like/6424a808fc28a293c573cdb8	undefined
+20230401	21:15:18	3b35ce9f-1ecb-47bd-92bc-4c4f1072d53e	Error: Not Authorized	POST	/like/6424a808fc28a293c573cdb8	undefined
+20230401	21:16:53	1e328923-22fe-4993-8598-27dfb82f793b	Error: Not Authorized	POST	/like/6424a808fc28a293c573cdb8	undefined
+20230401	21:19:20	2e07d384-b0e1-42d1-b63b-e9c56ed53dcb	TypeError: likeExists.remove is not a function	POST	/like/6424a808fc28a293c573cdb8	undefined

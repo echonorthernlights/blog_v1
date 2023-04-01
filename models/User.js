@@ -27,6 +27,10 @@ const userSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    image: {
+      type: String,
+      default : "00-avatar-default.png"
+    },
     isActive: {
       type: Boolean,
       default: true,
